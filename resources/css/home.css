@@ -1,0 +1,125 @@
+html{
+    background: url(/public/resources/image/marble-natural.jpg);
+    background-attachment: fixed;
+    /* background-position: 0px 94.3cm; */
+    background-size: 100%;
+}
+
+body{
+    width: 75%;
+    margin: auto;
+    background-color: white;
+}
+
+header{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+}
+
+.logo{
+    width: 200px;
+    padding: 20px 50px 20px 50px;
+    
+}
+
+.logo img{
+    height: 168px;
+    width: auto;
+}
+
+.header-text{
+   
+    width: 100%;
+    
+}
+
+h1{
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 27px;
+    margin-top: 50px;
+    padding-left: 10px;
+}
+
+h2{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: 400;
+    font-size: 37px;
+    padding-left: 50px;
+}
+
+.history{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.block-2{
+    width: auto;
+    height: 100%;
+}
+
+.block-2 p{
+    width: auto;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+}
+
+.center{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+.navMenu {
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navMenu a {
+    color:black;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 20%;
+    height: 100%;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    font-family: "Montserrat", sans-serif;
+    padding: 12px 15px 12px 15px;
+    margin: 0;
+    text-align: center;
+}
+
+.navMenu a:hover {
+    background-color:rgb(44, 30, 0);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
