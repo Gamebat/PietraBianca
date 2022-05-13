@@ -1,7 +1,7 @@
 @section('header')
 <header>
     <div class="logo">
-        <img src="/image/Pietra_bianca.png" alt="">
+        <img src="../public/image/Pietra_bianca.png" alt="">
     </div>
     
     <div class="header-text">

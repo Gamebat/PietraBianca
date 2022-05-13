@@ -1,12 +1,12 @@
 html{
-    background: url(/public/resources/image/marble-natural.jpg);
+    background: url(../image/marble-natural.jpg);
     background-attachment: fixed;
     /* background-position: 0px 94.3cm; */
     background-size: 100%;
 }
 
 body{
-    width: 75%;
+    width: 1430px;
     margin: auto;
     background-color: white;
 }
@@ -74,10 +74,6 @@ h2{
     flex-direction: row;
     margin: auto;
 }
-
-
-
-
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");

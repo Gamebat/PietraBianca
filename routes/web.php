@@ -21,3 +21,5 @@ Route::get('/contact', function () {
 Route::get('/test', function () {
     return view('test');
 });
+
+Route::get('/catalog', 'App\Http\Controllers\CatalogController@allData');

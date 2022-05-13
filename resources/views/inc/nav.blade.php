@@ -1,9 +1,9 @@
 @section('nav')
 <nav class="navMenu">
-    <a href="#">О нас</a>
-    <a href="#">Каталог</a>
-    <a href="#">Готовые работы</a>
-    <a href="#">Отзывы</a>
-    <a href="#">Контакты</a>
+    <a href="./">О нас</a>
+    <a href="catalog">Каталог</a>
+    <a href="examples">Готовые работы</a>
+    <a href="feedback">Отзывы</a>
+    <a href="contact">Контакты</a>
 
 </nav>

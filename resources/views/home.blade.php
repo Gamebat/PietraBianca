@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title-block')Каталог@endsection
+@section('title-block')О нас@endsection
 
 @section('content')
 <main>
@@ -13,14 +13,14 @@
 
 
         <div style="width: 50%;" class="block-2">
-            <img style="width: 95%;  margin-left: 2.5%" src="one.jpg" alt="">
+            <img style="width: 95%;  margin-left: 2.5%" src="../public/image/one.jpg" alt="">
             <p style="margin-left: 2.5%">
                 • КОНЕЦ 1990-Х ГОДОВ <br/>
                 Открыт первый магазин.</p>
         </div>
 
         <div style="width: 50%;" class="block-2">
-            <img style="width: 95%;  margin-left: 2.5%" src="two.jpg" alt="">
+            <img style="width: 95%;  margin-left: 2.5%" src="../public/image/two.jpg" alt="">
             <p style="margin-left: 2.5%">
                 • В 1998 ГОДУ <br/>
                 Арендовано помещение площадью 900 м2 на территории бывшей металлобазы недалеко 
@@ -30,7 +30,7 @@
         </div>
 
         <div style="width: 60%;" class="block-2">
-            <img style="width: 95%; height: 95%;  margin-left: 2%" src="three.jpg" alt="">
+            <img style="width: 95%; height: 95%;  margin-left: 2%" src="../public/image/three.jpg" alt="">
             <p style="margin-left: 2%">
                 • В 2007 ГОДУ <br/>
                 Компания выиграла крупный тендер на обустройство внутренних помещений 
@@ -40,7 +40,7 @@
         </div>
 
         <div style="width: 40%;" class="block-2">
-            <img style="width: 95%; height: 95%;  margin-left: 2%" src="four.jpg" alt="">
+            <img style="width: 95%; height: 95%;  margin-left: 2%" src="../public/image/four.jpg" alt="">
             <p style="margin-left: 2%">
                 • С 2016 ГОДА <br/>
                 Было налажено сотрудничество с одной из крупнейших в мире торговых сетей по продаже 
@@ -50,7 +50,7 @@
         </div>
 
         <div style="width: 97.5%;" class="block-2">
-            <img style="width: 100%; margin-left: 1.25%;" src="five.jpg" alt="">
+            <img style="width: 100%; margin-left: 1.25%;" src="../public/image/five.jpg" alt="">
             <p style="margin-left: 2%">
                 • 15 ИЮЛЯ 2021 ГОДА <br/>
                 Был введен в эксплуатацию новый завод по обработке мрамора, который разместился 

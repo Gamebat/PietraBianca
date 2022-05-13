@@ -16,7 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
         'resources/css/home.css', 
         'resources/css/contact.css',
         'resources/css/feedback.css',
-        'resources/css/examples.css',
+        'resources/css/catalog.css',
         'resources/css/test.css'
         //
     ], 'public/css/all.css' );
