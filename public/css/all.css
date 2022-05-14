@@ -196,34 +196,49 @@ main{
    
 }
 
-.page-items{
-    display: flex;
-    flex-direction: row;
+.pages{
+    margin: auto;
 }
 
-.page-items span{
+.pagination{
+    list-style-type: none;
     display: flex;
-    flex-direction: row;
+    text-decoration: none;
 }
 
-/* .page-items span a {
-
-    display: none;
+.page-link{
+    text-decoration: none;
+    color: black;
+    font-family: 'SuisseIntl-Light';
+    font-size: 1.5em;
+    width: 45px;
+    height: 45px;
+    display:table-cell; 
+    vertical-align:middle;
+    text-align:center;
+    font-weight: 600;
 }
 
-.page-items span a:first-child,
-.page-items span a:nth-child( 2 ),
-.page-items span a:nth-child( 3 ),
-.page-items span a:nth-last-child( 2 ),
-.page-items span a:nth-last-child( 3 ),
-.page-items span a:last-child,
-.page-items span a.active,
-.page-items span a.disabled {
+.pagination li a:hover{
+    border-radius: 50%;
+    background-color: bisque;
+}
 
-    display: flex;
-  
-} */
+.pagination li{
+    display:table-cell; 
+    vertical-align:middle;
+    text-align:center;
+   
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin: 0 5px 0 5px;
+}
 
-.page-items span a:disabled{
-    border: 2px solid red;
+.active{
+    pointer-events: none; 
+    cursor: default; 
+    color: #888; 
+    border: 2px solid black;
+    border-radius: 50%;
 }

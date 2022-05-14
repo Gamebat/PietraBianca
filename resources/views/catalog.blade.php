@@ -21,7 +21,7 @@
         
     </div>
 
-    <div class="pagination">
+    <div class="pages">
         {{ $data->onEachSide(2)->links() }}
     </div>
 </main>
