@@ -7,11 +7,24 @@
 <main>
     <div class="catalog">
 
-        @foreach ($collection as $item)
-            
+        @foreach ($data as $el)
+            <div class="content-block">
+                <img src="{{ $el->path }}" alt="">
+                <div class="content-text">
+                    <p> {{ $el->name }} </p>
+                    <p> от {{ number_format($el->price, 0, '', ' ') }} ₽/м<sup>2</sup> </p>
+                    <p> В наличии {{ number_format($el->amount, 2, ',', ' ') }} м<sup>2</sup> </p>
+                </div>
+                
+            </div>
         @endforeach
+        
+    </div>
 
+    <div class="pagination">
+        {{ $data->onEachSide(2)->links() }}
     </div>
 </main>
 
 @endsection
+
