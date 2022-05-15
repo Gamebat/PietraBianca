@@ -22,7 +22,7 @@
     </div>
 
     <div class="pages">
-        {{ $data->onEachSide(2)->links() }}
+        {{ $data->links() }}
     </div>
 </main>
 

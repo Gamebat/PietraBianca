@@ -59,6 +59,11 @@ main{
 .content-block img{
     width: 100%;
     height: 80%;
+    transition: all 0.5s ease-out;
+}
+
+.content-block img:hover{
+transform: scale(1.2);
 }
 
 .content-block p{

@@ -12,13 +12,13 @@
     @endif
 
     <?php
-        $start = $paginator->currentPage() - 2; // show 3 pagination links before current
-        $end = $paginator->currentPage() + 2; // show 3 pagination links after current
+        $start = $paginator->currentPage() - 2; 
+        $end = $paginator->currentPage() + 2; 
         if($start < 1) {
-            $start = 1; // reset start to 1
+            $start = 1; 
             $end += 1;
         } 
-        if($end >= $paginator->lastPage() ) $end = $paginator->lastPage(); // reset end to last page
+        if($end >= $paginator->lastPage() ) $end = $paginator->lastPage(); 
     ?>
 
     @if($start > 1)

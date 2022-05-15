@@ -12,10 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .vue()
     .styles([
         'resources/css/home.css', 
         'resources/css/contact.css',
         'resources/css/feedback.css',
-        'resources/css/catalog.css'
+        'resources/css/catalog.css',
+        'resources/css/image-upload.css'
         //
     ], 'public/css/all.css' );

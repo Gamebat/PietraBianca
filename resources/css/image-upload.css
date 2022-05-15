@@ -1,0 +1,9 @@
+#app{
+    width: 100%;
+    display: flex;
+}
+
+.image-uploader{
+    display: flex;
+    flex-direction: column;
+}
