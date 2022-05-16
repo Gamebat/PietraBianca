@@ -1,6 +1,6 @@
 <template>
     <div class="image-uploader">
-        <div class="progress" style="height: 40px;">
+        <div class="progress">
             <div class="progress-bar" role="progressbar" :style="{width: fileProgress + '%'}">
                 {{ fileCurrent + '%'}}
             </div>
@@ -51,6 +51,7 @@ import axios from "axios";
             async fileInputChange(){
                 let files = Array.from(event.target.files);
                 this.filesOrder = files.slice();
+
                 for(let item of files) {
                     await this.uploadFile(item);
                 }
@@ -59,7 +60,7 @@ import axios from "axios";
                 let form = new FormData();
                 form.append('image', item);
 
-                await axios.post('/feedback/upload', form, {
+                await axios.post('feedback', form, {
                         onUploadProgress: (itemUpload) =>{
                             this.fileProgress = Math.round( (itemUpload.loaded / itemUpload.total) * 100);
                             this.fileCurrent = item.name + ' ' + this.fileProgress;
@@ -70,10 +71,10 @@ import axios from "axios";
                     this.fileProgress = 0;
                     this.fileCurrent= '';
                     this.filesFinish.push(item);
-                    this.fileOrder.splice(item, 1);
+                    this.filesOrder.splice(item, 1);
                 })
                 .catch(error => {
-                    console.log(error);
+                    console.log('я ошибка',error);
                 })
             }
         }

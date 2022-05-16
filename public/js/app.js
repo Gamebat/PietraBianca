@@ -5520,7 +5520,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 form = new FormData();
                 form.append('image', item);
                 _context2.next = 4;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/feedback/upload', form, {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().post('feedback', form, {
                   onUploadProgress: function onUploadProgress(itemUpload) {
                     _this2.fileProgress = Math.round(itemUpload.loaded / itemUpload.total * 100);
                     _this2.fileCurrent = item.name + ' ' + _this2.fileProgress;
@@ -5531,9 +5531,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                   _this2.filesFinish.push(item);
 
-                  _this2.fileOrder.splice(item, 1);
+                  _this2.filesOrder.splice(item, 1);
                 })["catch"](function (error) {
-                  console.log(error);
+                  console.log('я ошибка', error);
                 });
 
               case 4:
@@ -28991,7 +28991,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "image-uploader" }, [
-    _c("div", { staticClass: "progress", staticStyle: { height: "40px" } }, [
+    _c("div", { staticClass: "progress" }, [
       _c(
         "div",
         {
