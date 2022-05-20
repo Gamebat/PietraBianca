@@ -1,0 +1,271 @@
+@font-face {
+	font-family: 'DidactGothic'; 
+	src: url('../fonts/DidactGothic.ttf') format('truetype'); 
+}
+
+.feedimage{
+    height: 100px;
+    width: 100px;
+}
+
+.feedback-block{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: rgb(242,242,242);
+    padding: 15px 20px 15px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.feedback-block img{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 5px 0 0;
+}
+
+
+.feedflex{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.feedback{
+    width: 60%;
+}
+
+.feedback h2{
+    font-family: 'DidactGothic';
+    font-weight: 400;
+    font-size: 37px;
+    margin: 0;
+    margin-top: -10px;
+    padding: 0 0 10px 10px;
+    
+}
+
+.stars p{
+    padding: 0;
+    margin: 0;
+    font-family: 'DidactGothic';
+    font-weight: 600;
+    margin-left: 7px;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+
+.comment{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    font-family: 'DidactGothic';
+    line-height: 18px;
+    width: 85%;
+    float: left;
+}
+
+.img-block{
+    margin-top: 10px;
+}
+
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+	margin-bottom: 15px;
+}
+
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+
+.form_radio_btn label {
+	padding: 0 5px;
+}
+
+.radio_image{
+    background-image: url(../image/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.stringR{
+    width: 40px;
+    height: 45px;
+    display: inline-block;
+	cursor: pointer;
+	padding: 0px 0px;
+    background-image: url(../image/emptystar.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+	user-select: none;
+}
+
+.starfill{
+    /* width: 40px;
+    height: 45px;
+    display: inline-block;
+	cursor: pointer;
+	padding: 0px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+	user-select: none; */
+    background-image: url(../image/star.svg);
+}
+
+.stars{
+    display: flex;
+    flex-direction: row;
+}
+.starempty{
+    background-image: url(../image/emptystar.svg);
+    width: 17px;
+    height: 19px;
+	padding: 0px 0px;
+    margin-right: 1.5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lockfill2{
+    background-image: url(../image/star.svg);
+    width: 17px;
+    height: 19px;
+	padding: 0px 0px;
+    margin-right: 1.5px;
+    background-repeat: no-repeat;
+
+    background-position: center;
+    
+}
+
+.lockfill{
+    background-image: url(../image/star.svg);
+}
+
+.myForm{
+    display: flex;
+    flex-direction: column;
+    width: 487px;
+}
+
+.myForm h2{
+    font-family: 'DidactGothic';
+    font-weight: 600;
+    font-size: 37px;
+    margin: 0;
+    margin-top: -10px;
+    padding: 0 0 10px 0px;
+    
+}
+
+
+.inputname{
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(242,242,242);
+    height: 30px;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 10px 10px 10px 15px;
+    font-family: 'DidactGothic';
+    outline:none;
+}
+
+.lname{
+    font-family: 'DidactGothic';
+    font-weight: 800;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.areaclass{
+    resize: none;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(242,242,242);
+    height: 130px;
+    margin: 10px 0;
+    padding: 10px 10px 10px 15px;
+    font-size: 16px;
+    font-family: 'DidactGothic';
+    outline:none;
+}
+
+.inputname:hover::-webkit-input-placeholder{
+    color: black;
+}
+
+.inputname:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+
+.areaclass:hover::-webkit-input-placeholder{
+    color: black;
+}
+
+.areaclass:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+
+.input-file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.lfile{
+    font-weight: 800;
+    font-size: 18px;
+    font-family: 'DidactGothic';
+    margin: 0px 0px 10px 0px;
+    background-color:rgb(242,242,242);
+    width: 140px;
+    padding: 8px;
+    border-radius: 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.lfile:hover {
+    background-color:rgb(190, 190, 190);
+    
+}
+
+.imagesload img{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 5px 0 0;
+}
+
+.imagesload{
+    margin: 0px 0px 10px 0px;
+}
+
+.submit{
+    font-weight: 800;
+    font-size: 18px;
+    font-family: 'DidactGothic';
+    margin: 0px 0px 10px 0px;
+    background-color:rgb(242,242,242);
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.submit:hover {
+    background-color:rgb(190, 190, 190);
+    
+}

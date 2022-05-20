@@ -7,30 +7,23 @@ use App\Http\Requests\UploadRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use App\Models\Reviews;
 
 class FeedbackController extends Controller
 {
-
-    public function allData(UploadRequest $req){
-        return view('feedback', ['data' => Reviews::orderBy('id','desc')->paginate(5)]);
-
-    }
-
     public function upload(UploadRequest $req)
     {
         $user = $req -> input('name');
 
         // Преобразуем массив путей в строку
-        $allpath=[];
+        $path=[];
         $string = '';
 
         foreach ($req->file('image') as $file){
-            $path = $file -> store('feedbackImages', 'public');
-            array_push($allpath, $path);
+            $file -> store('feedbackImages');
+            array_push($path, $file);
         }
 
-        foreach($allpath as $a)
+        foreach($path as $a)
         { 
             $string .= $a.';';
         }
@@ -48,12 +41,10 @@ class FeedbackController extends Controller
             'user' => $user,
             'rating' => $rating,
             'comment' => $comment,
-            'path_image' => $solution,
-            'created_at' => DB::raw('CURRENT_TIMESTAMP'),
-            'updated_at' => DB::raw('CURRENT_TIMESTAMP')
+            'path_image' => $solution
         ]);
 
-        return view('feedback', ['data' => Reviews::orderBy('id','desc')->paginate(5)]);
+        return('success');
 
         // $path = $req->file('image');
         // dd($req->files);
@@ -62,19 +53,47 @@ class FeedbackController extends Controller
 
     public function test(UploadRequest $req)
     {
+        // $stroka='';
+        // $collection = ['adsa','asd','qweq'];
+        // foreach ($collection as $element){
+        //     $stroka+=$element;
+        // }
+        
+        // return ($stroka);
+
+        // $string = '';
+
+        // $collection = ['adsa','asd','qweq'];
+        // foreach($collection as $a)
+        // { 
+        //     $string .= $a.';';
+        // }
+
+        // $solution = substr($string,0,-1);
+
+        // $explode = explode(';', $solution);
+
+        // array_push($collection, 'asdassad');
+        // return($collection);
+
+        // Преобразуем массив путей в строку
+        $path=[];
         $string = '';
 
-        $collection = ['adsa','asd','qweq'];
-        foreach($collection as $a)
+        foreach ($req->file('image') as $file){
+            $file -> store('feedbackImages');
+            array_push($path, $file);
+        }
+
+        foreach($path as $a)
         { 
             $string .= $a.';';
         }
 
         $solution = substr($string,0,-1);
 
-        $explode = explode(';', $solution);
-
-        return($explode);
+        return('loh');
+        
     }
 
 }

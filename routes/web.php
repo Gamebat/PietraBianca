@@ -12,6 +12,12 @@ Route::get('/feedback', function () {
 
 Route::post('/feedback', 'App\Http\Controllers\FeedbackController@upload')->name('image-upload');
 
+Route::post('/feedback/send', 'App\Http\Controllers\FeedbackController@send')->name('form-send');
+
+Route::get('/feedback', 'App\Http\Controllers\FeedbackController@allData');
+
+Route::get('/feedback/test', 'App\Http\Controllers\FeedbackController@test');
+
 Route::get('/examples', function () {
     return view('examples');
 });

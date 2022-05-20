@@ -78,7 +78,8 @@ transform: scale(1.2);
 }
 
 .pages{
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .pagination{

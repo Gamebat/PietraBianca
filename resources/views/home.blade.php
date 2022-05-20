@@ -64,7 +64,4 @@
     </div>
 </main>
 
-<footer>
-    
-</footer>
 @endsection

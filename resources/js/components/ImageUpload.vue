@@ -6,8 +6,15 @@
             </div>
 
             <hr>
-
-            <input type="file" name="image" multiple="" @change="fileInputChange">
+            
+            <form action="http://localhost/PietraBianca/public/feedback/send" method="post" enctype="multipart/form-data">
+                <div id="customCSRF">
+                    
+                </div>
+                <input type="file" name="image" id="image" multiple="" @change="fileInputChange">
+                
+                <button type="submit" class="btn btn-success">Upload</button>
+            </form>
 
             <hr>
 
@@ -37,6 +44,8 @@
 <script>
 import axios from "axios";
 
+
+
     export default {
         data(){
             return{
@@ -44,8 +53,14 @@ import axios from "axios";
                 filesFinish: [],
                 fileProgress: 0,
                 fileCurrent: ''
+                
             }
 
+        },
+        mounted (){
+            let csrfToken = document.getElementsByName('_token')[0];
+            console.log("CSRF inputs:", csrfToken);
+            document.getElementById('customCSRF').innerHTML = csrfToken.outerHTML;
         },
         methods: {
             async fileInputChange(){

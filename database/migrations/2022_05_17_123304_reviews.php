@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('user');
             $table->integer('rating');
             $table->text('comment');
+            $table->text('path_image');
             $table->timestamps();
         });
     }

@@ -5460,6 +5460,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5469,6 +5476,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       fileProgress: 0,
       fileCurrent: ''
     };
+  },
+  mounted: function mounted() {
+    var csrfToken = document.getElementsByName('_token')[0];
+    console.log("CSRF inputs:", csrfToken);
+    document.getElementById('customCSRF').innerHTML = csrfToken.outerHTML;
   },
   methods: {
     fileInputChange: function fileInputChange() {
@@ -29008,10 +29020,30 @@ var render = function () {
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
-      _c("input", {
-        attrs: { type: "file", name: "image", multiple: "" },
-        on: { change: _vm.fileInputChange },
-      }),
+      _c(
+        "form",
+        {
+          attrs: {
+            action: "http://localhost/PietraBianca/public/feedback/send",
+            method: "post",
+            enctype: "multipart/form-data",
+          },
+        },
+        [
+          _c("div", { attrs: { id: "customCSRF" } }),
+          _vm._v(" "),
+          _c("input", {
+            attrs: { type: "file", name: "image", id: "image", multiple: "" },
+            on: { change: _vm.fileInputChange },
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn btn-success", attrs: { type: "submit" } },
+            [_vm._v("Upload")]
+          ),
+        ]
+      ),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),

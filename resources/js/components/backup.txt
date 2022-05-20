@@ -1,0 +1,7 @@
+await axios.post('feedback', form, {
+                        onUploadProgress: (itemUpload) =>{
+                            this.fileProgress = Math.round( (itemUpload.loaded / itemUpload.total) * 100);
+                            this.fileCurrent = item.name + ' ' + this.fileProgress;
+                        }
+                    }
+                )
