@@ -17,6 +17,13 @@ header{
     display: flex;
     flex-direction: row;
     background-color: none;
+    position: relative;
+}
+
+.adminP{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .logo{
@@ -111,7 +118,22 @@ h2{
     color: white;
 }
 
+.adminP a{
+    color:black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+}
 
+.adminP li{
+    list-style-type:none;
+    margin-right: 10px;
+}
+
+.adminP ul{
+    display: flex;
+    flex-direction: row;
+}
 
 
 

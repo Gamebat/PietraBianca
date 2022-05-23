@@ -17,6 +17,13 @@ header{
     display: flex;
     flex-direction: row;
     background-color: none;
+    position: relative;
+}
+
+.adminP{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .logo{
@@ -111,7 +118,22 @@ h2{
     color: white;
 }
 
+.adminP a{
+    color:black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+}
 
+.adminP li{
+    list-style-type:none;
+    margin-right: 10px;
+}
+
+.adminP ul{
+    display: flex;
+    flex-direction: row;
+}
 
 
 
@@ -282,7 +304,7 @@ h2{
 
 .myForm h2{
     font-family: 'DidactGothic';
-    font-weight: 600;
+    font-weight: 500;
     font-size: 37px;
     margin: 0;
     margin-top: -10px;
@@ -393,6 +415,25 @@ h2{
     background-color:rgb(190, 190, 190);
     
 }
+
+.otzivbutton{
+    font-family: 'DidactGothic';
+    font-weight: 500;
+    font-size: 37px;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0 0 10px 0px;
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+    border-radius: 50px;
+    background-color: rgb(239,206,74);
+    width: 291px;
+    height: 40px;
+    text-align: center;
+}
+
+
 @font-face {
 	font-family: 'SuisseIntl-Regular'; 
 	src: url('./fonts/SuisseIntl-Regular.otf') format('opentype'); 
@@ -524,4 +565,5 @@ footer{
     flex-direction: column;
     width: 100%;
 }
+
 

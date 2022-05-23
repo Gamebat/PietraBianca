@@ -5,7 +5,7 @@
 @section('content')
 
 
-<div class="feedflex">
+<div style="@if (url()->full() == ('http://localhost/PietraBianca/public/feedback') || url()->full() == ('http://localhost/PietraBianca/public/feedback?page=1')) '' @else justify-content: flex-start @endif" class="feedflex">
     
 
     <div class="feedback">
@@ -45,8 +45,9 @@
         
     </div>
 
+    @if (url()->full() == ('http://localhost/PietraBianca/public/feedback') || url()->full() == ('http://localhost/PietraBianca/public/feedback?page=1'))
 
-    <form class="myForm" action="{{ route('image-upload') }}" method="post" enctype="multipart/form-data">
+    <form  class="myForm" action="{{ route('image-upload') }}" method="post" enctype="multipart/form-data">
         @csrf
         @if ($errors->any())
         <div class="alert">
@@ -116,6 +117,11 @@
         <input value="" type="hidden" name="namef" id="namef">
         <input value="" type="hidden" name="stars" id="stars">
     </form>
+    
+    @else
+        <a href="./feedback" class="otzivbutton">Оставить отзыв</a>
+    
+    @endif
 
 
 </div>

@@ -12,8 +12,8 @@
     
 </head>
 <body>
-    <h1>Вход</h1>
-    <form  class="myForm" action="{{ route('user.login') }}" method="post" enctype="multipart/form-data">
+    <h1>Регистрация</h1>
+    <form  class="myForm" action="{{ route('user.registration') }}" method="post" enctype="multipart/form-data">
         @csrf
         @if ($errors->any())
         <div class="alert">
@@ -34,7 +34,7 @@
         @enderror --}}
 
         <label class="lname" for="name">Пароль</label>
-        <input class="inputname" type="text" name="password" id="password" placeholder="Введите пароль">
+        <input class="inputname" type="password" name="password" id="password" placeholder="Введите пароль">
         {{-- @error('password')
         <div class="alert">
             {{ $message }}

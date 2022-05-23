@@ -4,11 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 return view('home');
-});
-
-Route::get('/feedback', function () {
-    return view('feedback');
-});
+})->name('home');
+// Route::get('/feedback', function () {
+//     return view('feedback');
+// })->middleware('auth');
 
 Route::post('/feedback', 'App\Http\Controllers\FeedbackController@upload')->name('image-upload');
 
@@ -34,4 +33,31 @@ Route::get('/catalog', 'App\Http\Controllers\CatalogController@allData');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::name('user.')->group(function(){
+    Route::view('/orders', 'orders')->middleware('auth')->name('orders');
+
+    Route::get('/login', function(){
+        if(Auth::check()){
+            return redirect(route('user.orders'));
+        }
+        return view('auth/login');
+    })->name('login');
+
+    Route::post('/login', [App\Http\Controllers\LoginController::class, 'login']);
+
+    Route::get('/logout',function(){
+        Auth::logout();
+        return redirect('/');
+    })->name('logout');
+
+    Route::get('/registration',function(){
+        if(Auth::check()){
+            return redirect(route('home'));
+        }
+        return view('auth/registration');
+    })->name('registration');
+
+    Route::post('/registration', [App\Http\Controllers\RegisterController::class, 'save']);
+});
+
+
