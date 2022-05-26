@@ -12,8 +12,10 @@
     
 </head>
 <body>
-    <h1>Регистрация</h1>
-    <form  class="myForm" action="{{ route('user.registration') }}" method="post" enctype="multipart/form-data">
+    <div style="width: 500px; position: relative; height: 280px; min-height:250px; padding: 15px; border-radius: 20px; margin-top: 100px;" class="tipobody">
+    <h1 style="margin: 0 0 10px 3px; padding: 0">Регистрация</h1>
+    <a class="vihod" href="./">На главную</a>
+    <form class="myForm" action="{{ route('user.registration') }}" method="post" enctype="multipart/form-data">
         @csrf
         @if ($errors->any())
         <div class="alert">
@@ -41,7 +43,8 @@
         </div>
         @enderror --}}
 
-        <button class="submit" type="submit" class="btn btn-success">Отправить</button>
+        <button class="submit" type="submit" class="btn btn-success">Зарегистрироваться</button>
 
     </form>
+    </div>
 </body>

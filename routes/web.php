@@ -9,6 +9,31 @@ return view('home');
 //     return view('feedback');
 // })->middleware('auth');
 
+
+//Обработка заказов
+
+Route::get(
+    '/orders/{id}/accept', 
+    'App\Http\Controllers\OrderController@orderAccept')
+->name('order-accept');
+Route::post(
+    '/orders/{id}/accept', 
+    'App\Http\Controllers\OrderController@submitAccept')
+->name('submit-accept');
+
+Route::get(
+    '/orders/{id}/decline', 
+    'App\Http\Controllers\OrderController@orderDecline')
+->name('order-decline');
+
+Route::get(
+    '/orders/{id}/complete', 
+    'App\Http\Controllers\OrderController@orderComplete')
+->name('order-complete');
+
+//Конец обработки заказов
+
+
 Route::post('/feedback', 'App\Http\Controllers\FeedbackController@upload')->name('image-upload');
 
 Route::post('/feedback/send', 'App\Http\Controllers\FeedbackController@send')->name('form-send');
@@ -31,10 +56,12 @@ Route::get('/test', function () {
 
 Route::get('/catalog', 'App\Http\Controllers\CatalogController@allData');
 
+Route::get('/examples', 'App\Http\Controllers\ExamplesController@allData');
+
 Auth::routes();
 
 Route::name('user.')->group(function(){
-    Route::view('/orders', 'orders')->middleware('auth')->name('orders');
+    Route::get('/orders', 'App\Http\Controllers\OrderController@allData')->middleware('auth')->name('orders');
 
     Route::get('/login', function(){
         if(Auth::check()){

@@ -12,10 +12,13 @@
     
 </head>
 <body>
+    <div class="tipobody">
     @include('inc.header')
     @include('inc.nav')
 
     @yield('content')
+    </div>
+    @include('inc.footer')
 </body>
 
 

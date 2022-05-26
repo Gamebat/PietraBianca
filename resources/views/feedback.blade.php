@@ -101,7 +101,7 @@
 
         
         <label class="lname" for="comment">Комментарий</label>
-        <textarea class="areaclass" type="textarea" name="comment" id="csomment" placeholder="Напишите комментарий"></textarea>
+        <textarea class="areaclass" type="textarea" name="comment" id="comment" placeholder="Напишите комментарий"></textarea>
 
         <label class="lfile" for="image">Выберите файлы</label>
         <input class="input-file" type="file" name="image[]" id="image" multiple=""
